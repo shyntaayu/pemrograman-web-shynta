@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIJAM - Sistem Informasi Jadwal Mengajar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="logo-area">
+            <div class="logo-placeholder">SJ</div>
+            <h1>SIJAM <small style="font-size: 0.5em; vertical-align: middle;">v1.0</small></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link">Dashboard</a></li>
+                <li><a href="#" target="_blank" class="nav-link">Jadwal Kuliah</a></li>
+                <li><a href="#" class="nav-link">Riwayat Mengajar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="spinner"></div>
+    <div class="skeleton"></div>
+    <div class="notification-dot"></div>
+    <div class="container hero">
+        <main>
+            <section class="card">
+                <h2>Input Jadwal Baru</h2>
+                <form class="form-grid">
+                    <div class="form-group">
+                        <label>Mata Kuliah</label>
+                        <input type="text" class="form-input" placeholder="Contoh: Pemrograman Web">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select class="form-input">
+                            <option>Akan Diajar</option>
+                            <option>Sedang Berlangsung</option>
+                            <option>Selesai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Jam</label>
+                        <input type="time" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Ruangan</label>
+                        <input type="text" class="form-input" placeholder="Contoh: Lab Komputer 1">
+                    </div>
+                    <button type="submit" class="btn-submit btn">Simpan Jadwal</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Daftar Mengajar Hari Ini</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mata Kuliah</th>
+                            <th>Jam</th>
+                            <th>Ruangan</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kecerdasan Buatan</td>
+                            <td>08:00 - 10:00</td>
+                            <td>R.302</td>
+                            <td><span class="badge status-selesai">Selesai</span></td>
+                        </tr>
+                        <tr>
+                            <td>Struktur Data</td>
+                            <td>10:30 - 12:00</td>
+                            <td>Lab Jaringan</td>
+                            <td><span class="badge status-sedang">Sedang Diajar</span></td>
+                        </tr>
+                        <tr>
+                            <td>Basis Data</td>
+                            <td>13:00 - 15:00</td>
+                            <td>R.101</td>
+                            <td><span class="badge status-akan">Akan Diajar</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jaringan Komputer</td>
+                            <td>15:30 - 17:00</td>
+                            <td>Lab Komputer 2</td>
+                            <td><span class="badge status-akan">Akan Diajar</span></td>
+                        </tr>
+                        <tr>
+                            <td>Etika Profesi</td>
+                            <td>19:00 - 21:00</td>
+                            <td>Daring (Zoom)</td>
+                            <td><span class="badge status-akan">Akan Diajar</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <aside id="sidebar">
+            <section class="card">
+                <h3>Statistik Mengajar</h3>
+                <div class="stat-box">
+                    <span class="stat-number">12</span>
+                    <small>Total SKS Minggu Ini</small>
+                </div>
+                <br>
+                <div class="stat-box" style="border-left-color: var(--success);">
+                    <span class="stat-number">85%</span>
+                    <small>Kehadiran Dosen</small>
+                </div>
+            </section>
+
+            <section class="card flip-card">
+                <h3>Todo List Mengajar</h3>
+                <ul class="todo-list">
+                    <li class="todo-item"><input type="checkbox" checked> Siapkan slide Kecerdasan Buatan</li>
+                    <li class="todo-item"><input type="checkbox" checked> Koreksi tugas Struktur Data</li>
+                    <li class="todo-item"><input type="checkbox"> Upload materi Basis Data ke LMS</li>
+                    <li class="todo-item"><input type="checkbox"> Rekap absensi mingguan</li>
+                    <li class="todo-item"><input type="checkbox"> Meeting koordinasi dosen</li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SIJAM - Sistem Informasi Jadwal Mengajar. <br>
+            <small>Dibuat dengan ❤️ untuk Manajemen Akademik yang lebih baik.</small>
+        </p>
+    </footer>
+
+</body>
+
+</html>

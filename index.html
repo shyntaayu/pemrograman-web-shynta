@@ -5,15 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judul Halaman HTML 2 </title>
+    <style>
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Konten halaman ditulis di sini -->
     <!-- ini komen -->
-    <h1>Selamat Datang!</h1>
-    <h2>Halo, Dunia!</h2>
+    <h1 style="color: red; font-size: 18px;">Selamat Datang!</h1>
+    <h2 class="yellow-color">Halo, Dunia!</h2>
     <h3>Selamat Datang di Halaman HTML 2</h3>
-    <p>Ini adalah paragraf pertama saya.</p>
+    <p style="color: brown;">Ini adalah paragraf pertama saya.</p>
 
     <!-- Elemen dengan tag pembuka dan penutup -->
     <p>Ini adalah paragraf.</p>
@@ -46,7 +53,9 @@
 
 
     <!-- Ordered List (bernomor) -->
-    <ol>
+    <ol class="card">
+        <p>ada <li>dia</li>
+        </p>
         <li>Buat akun</li>
         <li>Login ke sistem</li>
         <li>Isi data profil</li>
@@ -91,9 +100,11 @@
     <!-- Gambar dengan ukuran -->
     <img src="banner.jpg" alt="Banner" width="800" height="300">
 
-    <!-- Gambar dari URL -->
-    <img src="https://asset.kompas.com/crops/EWT_3unIesTwlF00R1Jw-IVi7JM=/1x0:1000x666/1200x800/data/photo/2019/11/04/5dbfff829ebe6.jpg"
-        alt="Foto Produk" width="100px">
+    <div class="img-wrapper">
+        <!-- Gambar dari URL -->
+        <img src="https://asset.kompas.com/crops/EWT_3unIesTwlF00R1Jw-IVi7JM=/1x0:1000x666/1200x800/data/photo/2019/11/04/5dbfff829ebe6.jpg"
+            alt="Foto Produk" width="100px">
+    </div>
 
     <!-- Gambar sebagai link -->
     <a href="halaman.html">

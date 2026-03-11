@@ -1,0 +1,313 @@
+h3 {
+  color: rgba(255, 0, 0, 0.4);
+  font-size: 20px;
+}
+
+h1 {
+  color: #1b3a6b; /* warna teks */
+  font-size: 32px; /* ukuran font */
+  font-weight: bold; /* tebal */
+  text-align: center; /* rata tengah */
+  margin-bottom: 20px; /* jarak bawah */
+}
+
+p {
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.6; /* jarak antar baris */
+}
+
+.yellow-color {
+  color: yellow;
+}
+
+.card {
+  background-color: #f8f8f8; /* warna latar belakang */
+  border: 3px solid #ddd; /* garis tepi */
+  border-radius: 5px; /* sudut melengkung */
+  padding: 20px; /* jarak dalam */
+  margin: 20px; /* jarak bawah */
+}
+
+#header {
+  background: #1b3a6b;
+}
+#sidebar {
+  width: 250px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* di atas elemen lain */
+}
+
+nav a {
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.card > li {
+  margin: 0;
+  background-color: beige;
+}
+
+a:visited {
+  color: purple;
+}
+
+tr:nth-child(odd) {
+  background: yellow;
+  border-bottom: 2px solid green;
+} /* zebra tabel */
+
+a[target="_blank"] {
+  color: orange;
+}
+
+* {
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* halus */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* sedang */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); /* dramatis */
+}
+
+.card {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+@media (max-width: 767px) {
+  /* Berlaku saat lebar layar ≤ 767px (mobile) */
+  header {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Berlaku khusus untuk tablet */
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Berlaku untuk layar laptop ke atas */
+  .dashboard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Print */
+@media print {
+  nav,
+  .sidebar,
+  .btn {
+    display: none;
+  }
+  body {
+    font-size: 12pt;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Font responsif dengan clamp */
+h1 {
+  font-size: clamp(24px, 5vw, 48px);
+}
+p {
+  font-size: clamp(14px, 2vw, 18px);
+}
+/* scroll horizontal */
+table {
+  overflow-x: auto;
+}
+
+/* Aspect ratio kotak */
+.video-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px); /* naik 4px */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* shadow lebih besar */
+}
+
+.btn {
+  background-color: #2980b9;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* animasi 0.3 detik */
+}
+.btn:hover {
+  background-color: #1b3a6b;
+} /* warna berubah smooth */
+
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.img-wrapper img {
+  transition: transform 0.4s ease;
+}
+.img-wrapper:hover img {
+  transform: scale(2.05);
+}
+
+/* Link underline animasi */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+} /* garis tumbuh */
+
+.form-input {
+  border: 2px solid #cccccc;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.form-input:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.2);
+}
+
+/* Card flip effect */
+.flip-card {
+  perspective: 1000px;
+  width: 250px;
+  height: 300px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: #1b3a6b;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e3e3e3;
+  border-top-color: #2980b9;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* ════ Contoh 3: Pulse — Notifikasi ════ */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+.notification-dot {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ════ Contoh 4: Skeleton Loading ════ */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+  height: 16px;
+}
