@@ -4,146 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judul Halaman HTML 2 </title>
-    <style>
-        p {
-            color: blue;
-            font-size: 16px;
-        }
-    </style>
-    <link rel="stylesheet" href="style.css">
+    <title>SIJAM - Sistem Informasi Jadwal Mengajar</title>
+    <link rel="stylesheet" href="style-proyek.css">
 </head>
 
 <body>
-    <!-- Konten halaman ditulis di sini -->
-    <!-- ini komen -->
-    <h1 style="color: red; font-size: 18px;">Selamat Datang!</h1>
-    <h2 class="yellow-color">Halo, Dunia!</h2>
-    <h3>Selamat Datang di Halaman HTML 2</h3>
-    <p style="color: brown;">Ini adalah paragraf pertama saya.</p>
 
-    <!-- Elemen dengan tag pembuka dan penutup -->
-    <p>Ini adalah paragraf.</p>
+    <header id="header">
+        <div class="logo-area">
+            <div class="logo-placeholder">SJ</div>
+            <h1>SIJAM <small>v1.0</small></h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Dashboard</a></li>
+                <li><a href="#" class="nav-link">Jadwal</a></li>
+                <li><a href="#" class="nav-link">Riwayat</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Elemen void (self-closing) -->
-    <br> <!-- Line break -->
-    <hr> <!-- Horizontal rule -->
-    <!-- <img src="ayam.jpg" alt="Foto"> -->
-    <input type="text">
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h2>Selamat Datang, Dosen Pengajar</h2>
+            <p>Kelola jadwal kuliah dan materi dalam satu platform terintegrasi.</p>
 
+            <form class="search-form">
+                <input type="text" placeholder="Cari jadwal atau mata kuliah..." class="search-input">
+                <button type="submit" class="btn-search">Cari</button>
+            </form>
+        </div>
+    </section>
 
-    <h1>Judul Utama (terbesar)</h1>
-    <h2>Sub Judul</h2>
-    <h3>Sub-Sub Judul</h3>
-    <h4>Heading Level 4</h4>
-    <h5>Heading Level 5</h5>
-    <h6>Heading Level 6 (terkecil)</h6>
+    <div class="container layout-wrapper">
+        <main>
+            <section class="grid-container">
+                <div class="card stat-card">
+                    <h4>Mata Kuliah</h4>
+                    <p>8 Aktif</p>
+                </div>
+                <div class="card stat-card">
+                    <h4>Mahasiswa</h4>
+                    <p>240 Orang</p>
+                </div>
+                <div class="card stat-card">
+                    <h4>Ruangan</h4>
+                    <p>12 Lab/Kelas</p>
+                </div>
+                <div class="card stat-card">
+                    <h4>Tugas</h4>
+                    <p>5 Baru</p>
+                </div>
+            </section>
 
+            <section class="card">
+                <h2>Input Jadwal Baru</h2>
+                <form class="form-grid">
+                    <div class="form-group">
+                        <label>Mata Kuliah</label>
+                        <input type="text" class="form-input" placeholder="Contoh: Pemrograman Web">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select class="form-input">
+                            <option>Akan Diajar</option>
+                            <option>Sedang Berlangsung</option>
+                            <option>Selesai</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit btn">Simpan Jadwal</button>
+                </form>
+            </section>
 
-    Baris 1<br>Baris 2
-    <hr>
-    <strong>Penting!</strong>
-    <em>perhatikan ini</em>
-    <u>nama produk</u>
-    <mark>dicari</mark>
-    <small>versi 1.0</small>
-    <del>Rp 100.000</del>
-    x<sup>2</sup>
-    H<sub>2</sub>O
+            <section class="card overflow-x">
+                <h2>Daftar Mengajar Hari Ini</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Mata Kuliah</th>
+                            <th>Jam</th>
+                            <th>Ruangan</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kecerdasan Buatan</td>
+                            <td>08:00 - 10:00</td>
+                            <td>R.302</td>
+                            <td><span class="badge status-selesai">Selesai</span></td>
+                        </tr>
+                        <tr>
+                            <td>Struktur Data</td>
+                            <td>10:30 - 12:00</td>
+                            <td>Lab Jaringan</td>
+                            <td><span class="badge status-sedang">Sedang</span></td>
+                        </tr>
+                        <tr>
+                            <td>Basis Data</td>
+                            <td>13:00 - 15:00</td>
+                            <td>R.101</td>
+                            <td><span class="badge status-akan">Akan Datang</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
 
-
-    <!-- Ordered List (bernomor) -->
-    <ol class="card">
-        <p>ada <li>dia</li>
-        </p>
-        <li>Buat akun</li>
-        <li>Login ke sistem</li>
-        <li>Isi data profil</li>
-    </ol>
-
-    <!-- Unordered List (bullet) -->
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-
-    <!-- Description List -->
-    <dl>
-        <dt>HTML</dt>
-        <dd>Bahasa markup untuk struktur halaman web</dd>
-        <dt>CSS</dt>
-        <dd>Bahasa stylesheet untuk tampilan halaman web</dd>
-    </dl>
-
-    <!-- Link ke halaman lain -->
-    <a href="https://www.google.com">Buka Google</a>
-
-    <!-- Link ke halaman internal -->
-    <a href="tentang.html">Tentang Kami</a>
-
-    <!-- Link buka tab baru -->
-    <a href="https://www.google.com" target="_blank">Buka di Tab Baru</a>
-
-    <!-- Link ke email -->
-    <a href="mailto:info@kampus.ac.id">Kirim Email</a>
-
-    <!-- Link ke nomor telepon -->
-    <a href="tel:+628123456789">Hubungi Kami</a>
-
-    <!-- Anchor / Jump to section -->
-    <a href="#kontak">Ke Bagian Kontak</a>
-
-    <!-- Gambar dasar -->
-    <img src="logo.png" alt="Logo Perusahaan">
-
-    <!-- Gambar dengan ukuran -->
-    <img src="banner.jpg" alt="Banner" width="800" height="300">
-
-    <div class="img-wrapper">
-        <!-- Gambar dari URL -->
-        <img src="https://asset.kompas.com/crops/EWT_3unIesTwlF00R1Jw-IVi7JM=/1x0:1000x666/1200x800/data/photo/2019/11/04/5dbfff829ebe6.jpg"
-            alt="Foto Produk" width="100px">
+        <aside id="sidebar">
+            <section class="card">
+                <h3>Filter Status</h3>
+                <div class="filter-group">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span> Aktif
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span> Selesai
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span> Dibatalkan
+                    </label>
+                </div>
+            </section>
+        </aside>
     </div>
 
-    <!-- Gambar sebagai link -->
-    <a href="halaman.html">
-        <img src="tombol.png" alt="Klik di sini">
-    </a>
-
-
-    <table border="1">
-        <thead>
-            <tr>
-                <th>NIM</th>
-                <th>Nama</th>
-                <th>Nilai</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>21001</td>
-                <td>Andi Pratama</td>
-                <td>85</td>
-                <td>kamis</td>
-            </tr>
-            <tr>
-                <td>21002</td>
-                <td>Sari Dewi</td>
-                <td>90</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="2" rowspan="2">Rata-rata</td>
-                <td>87.5</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-            </tr>
-        </tfoot>
-    </table>
+    <footer class="main-footer">
+        <div class="footer-col">
+            <h4>Tentang SIJAM</h4>
+            <p>Sistem manajemen jadwal mengajar dosen untuk efisiensi akademik.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Tautan Cepat</h4>
+            <ul>
+                <li><a href="#">Bantuan</a></li>
+                <li><a href="#">Panduan</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Sosial Media</h4>
+            <p>@sijam_univ</p>
+        </div>
+    </footer>
 
 </body>
 
