@@ -17,7 +17,7 @@
         </div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="#" class="nav-link">Dashboard</a></li>
+                <li><a href="#" class="nav-link" id="link">Dashboard</a></li>
                 <li><a href="#" class="nav-link">Jadwal</a></li>
                 <li><a href="#" class="nav-link">Riwayat</a></li>
             </ul>
@@ -26,12 +26,12 @@
 
     <section class="hero-section">
         <div class="hero-overlay">
-            <h2>Selamat Datang, Dosen Pengajar</h2>
+            <h2 id="judul">Selamat Datang, Dosen Pengajar</h2>
             <p>Kelola jadwal kuliah dan materi dalam satu platform terintegrasi.</p>
 
             <form class="search-form">
                 <input type="text" placeholder="Cari jadwal atau mata kuliah..." class="search-input">
-                <button type="submit" class="btn-search">Cari</button>
+                <button type="submit" onclick="ubahLink()" class="btn-search">Cari</button>
             </form>
         </div>
     </section>
@@ -59,7 +59,7 @@
 
             <section class="card">
                 <h2>Input Jadwal Baru</h2>
-                <form class="form-grid">
+                <form class="form-grid" id="form-login">
                     <div class="form-group">
                         <label>Mata Kuliah</label>
                         <input type="text" class="form-input" placeholder="Contoh: Pemrograman Web">
@@ -151,6 +151,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
